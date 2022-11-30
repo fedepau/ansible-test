@@ -3,10 +3,12 @@
 
 virtualmachines:
   hosts:
-    vm-1:
-      ansible_host: 192.168.122.202
+#    vm-1:
+#      ansible_host: 192.168.122.202
+#      ansible_user: testing
+    vm-2:
+      ansible_host: 192.168.122.173
       ansible_user: testing
-        #    vm-2:
-        #      ansible_host: 192.168.122.173
-        #    vm-3:
-        #      ansible_host: 192.168.122.214
+#    vm-3:
+#      ansible_host: 192.168.122.214
+#      ansible_user: testing

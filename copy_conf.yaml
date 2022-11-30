@@ -1,4 +1,4 @@
-- name: Install some programs
+- name: Copy some dotfiles
   hosts: virtualmachines
   become: true
   tasks:
