@@ -1,0 +1,22 @@
+- name: Install some programs
+  hosts: virtualmachines
+  become: true
+  tasks:
+    #    - name: Install Xorg
+    #      ansible.builtin.dnf:
+    #        pkg:
+    #          - xorg-x11-server-Xorg
+    #          - xorg-x11-xinit
+    #          - xev
+    #          - xrandr
+     - name: Install the 'LXDE' package group
+       ansible.builtin.dnf:
+         name:
+           - '@LXDE Desktop'
+           - '@LXDE Office'
+             #           - '@LXDE Multimedia support for LXDE'
+         state: latest
+           #    - name: Install Neovim
+           #      ansible.builtin.dnf:
+           #        pkg: neovim
+           #        state: latest

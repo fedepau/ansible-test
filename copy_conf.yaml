@@ -1,0 +1,11 @@
+- name: Install some programs
+  hosts: virtualmachines
+  become: true
+  tasks:
+    - name: Copy file with owner and permissions
+      ansible.builtin.copy:
+        src: /etc/X11/xinit/xinitrc
+        dest: /home/testing/.xinitrc
+        owner: testing
+        group: wheel
+        mode: '0644'
