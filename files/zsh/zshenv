@@ -1,0 +1,32 @@
+# executables
+export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.local/bin/programs:$PATH
+export PATH=$HOME/.local/bin/scripts:$PATH
+export PATH=$HOME/.local/bin/scripts/statusbar:$PATH
+export LD_LIBRARY_PATH=$HOME/.programs/togl/lib/Togl2.0:$LD_LIBRARY_PATH
+
+# GnuPG
+#export GNUPGHOME="$XDG_DAYA_HOME"/gnupg
+
+# xdg base dirs
+#export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+
+# nvim
+export EDITOR=nvim
+export VISUAL=nvim
+
+#X11
+export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
+
+# zsh
+export ZDOTDIR="$HOME/.config/zsh"
+export HISTFILE="$ZDOTDIR/histfile"
+export HISTSIZE=1000000
+export SAVEHIST=1000000
+fpath=($ZDOTDIR/plugins $fpath)
+
+# jupyter
+export JUPYTER_CONFIG_DIR="$HOME/.config/jupyter"

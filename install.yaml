@@ -1,26 +1,27 @@
-- name: Install some programs
+- name: install some programs
   hosts: virtualmachines
   become: true
   tasks:
-     - name: Install the 'LXDE' package group
+     - name: install a bunch of useful stuff
        ansible.builtin.dnf:
          pkg:
+           - alacritty
+           - chromium
+           - evince
+           - freecad
+           - git
+           - inkscape
+           - kicad
+           - libreoffice
            - '@LXDE Desktop'
            - '@LXDE Office'
-         state: latest
-     - name: Install alacritty
-       ansible.builtin.dnf:
-         pkg: alacritty
-         state: latest
-     - name: Install Neovim
-       ansible.builtin.dnf:
-         pkg: neovim
-         state: latest
-     - name: Install zsh
-       ansible.builtin.dnf:
-         pkg: zsh
-         state: latest
-     - name: Install git
-       ansible.builtin.dnf:
-         pkg: git
+           - mpv
+           - neovim
+           - pulseview
+           - prusa-slicer
+           - rsync
+           - zathura
+           - zathura-djvu
+           - zathura-pdf-mupdf
+           - zsh
          state: latest
