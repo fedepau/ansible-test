@@ -2,10 +2,14 @@
   hosts: virtualmachines
   become: true
   tasks:
-    - name: Copy file with owner and permissions
+    - name: copy issue
       ansible.builtin.copy:
-        src: /etc/X11/
-        dest: /home/testing/.xinitrc
+        src: ./files/mittelascii
+        dest: /etc/issue
         owner: testing
         group: wheel
         mode: '0644'
+    - name: copy xinitrc to home
+      ansible.builtin.shell:
+        cmd: [[ -f "~/.config/X11" ]] || mkdir ~/.config/X11 && cp /etc/X11/xinit/xinitrc ~/.config/X11/xinitrc 2>&1 >/dev/null
+        creates: ~/.config/X11/xinitrc

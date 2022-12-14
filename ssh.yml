@@ -1,4 +1,3 @@
----
 - name: Transfer SSH public key
   hosts: vm-1
   tasks:

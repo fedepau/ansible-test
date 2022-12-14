@@ -1,8 +1,11 @@
-- name: install some programs
+# everything works (on Fedora server). To run:
+# $ ansible-playbook -i inventory.yaml -K install.yaml
+
+- name: install base system
   hosts: virtualmachines
   become: true
   tasks:
-     - name: install a bunch of useful stuff
+     - name: install a bunch of useful programs
        ansible.builtin.dnf:
          pkg:
            - alacritty
